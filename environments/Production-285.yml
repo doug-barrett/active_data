@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "285"
+mappingDefinitions:
+  BRONZE:
+    database: LIVE_DATA
+    schema: BRONZE
+  GOLD:
+    database: LIVE_DATA
+    schema: GOLD
+  SILVER:
+    database: LIVE_DATA
+    schema: SILVER
+name: Production
+type: Environment
