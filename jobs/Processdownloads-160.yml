@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "160"
+includeSelector: "+{ location: STAGE name: PSTG_* }"
+name: Process downloads
+type: Job
