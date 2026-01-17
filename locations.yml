@@ -1,6 +1,7 @@
-defaultStorageMapping: SILVER
+defaultStorageMapping: STAGE
 fileVersion: 1
 locations:
-  - BRONZE
-  - GOLD
-  - SILVER
+  - DWH
+  - SRC_RETAIL
+  - SRC_WEATHER
+  - STAGE

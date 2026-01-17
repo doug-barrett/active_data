@@ -1,13 +1,16 @@
 fileVersion: 1
 id: "285"
 mappingDefinitions:
-  BRONZE:
-    database: LIVE_DATA
-    schema: BRONZE
-  GOLD:
+  DWH:
     database: LIVE_DATA
     schema: GOLD
-  SILVER:
+  SRC_RETAIL:
+    database: UNITED_STATES_RETAIL_FOOT_TRAFFIC_DATA
+    schema: PUBLIC
+  SRC_WEATHER:
+    database: GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI
+    schema: STANDARD_TILE
+  STAGE:
     database: LIVE_DATA
     schema: SILVER
 name: Production

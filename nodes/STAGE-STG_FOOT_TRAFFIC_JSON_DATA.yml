@@ -1,0 +1,130 @@
+fileVersion: 1
+id: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+name: STG_FOOT_TRAFFIC_JSON_DATA
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: af943b68-710c-408d-b43b-329fd4ea40e7
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: country
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"country\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 488b9be2-6e69-4983-80ef-b14f048d41b9
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: foot_traffic_count_normalized
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"foot_traffic_count_normalized\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b82453d-49bb-4c84-8bd9-ab5bb49f46ec
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: number_of_locations_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"number_of_locations_description\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93296bb2-1c91-457e-9566-4175f84ab819
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"state\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55b963f0-9267-4679-9131-d0b28f614487
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"timestamp\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98886f7b-3212-414e-9084-bb19ad27b941
+          stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        config: {}
+        dataType: STRING
+        description: ""
+        name: timestamp_interval
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"FOOT_TRAFFIC_JSON_DATA\".\"JSON_DATA\":\"timestamp_interval\"::STRING"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FOOT_TRAFFIC_JSON_DATA: 72daca61-0f12-46ce-9d43-80bb97f6448a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_RETAIL
+            nodeName: FOOT_TRAFFIC_JSON_DATA
+        join:
+          joinCondition: FROM {{ ref('SRC_RETAIL', 'FOOT_TRAFFIC_JSON_DATA') }} "FOOT_TRAFFIC_JSON_DATA"
+        name: STG_FOOT_TRAFFIC_JSON_DATA
+        noLinkRefs: []
+  name: STG_FOOT_TRAFFIC_JSON_DATA
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

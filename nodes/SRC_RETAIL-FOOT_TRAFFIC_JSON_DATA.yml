@@ -1,0 +1,35 @@
+fileVersion: 1
+id: 72daca61-0f12-46ce-9d43-80bb97f6448a
+name: FOOT_TRAFFIC_JSON_DATA
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_RETAIL
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 383878e8-c7dc-4d93-84c5-cbe025802388
+          stepCounter: 72daca61-0f12-46ce-9d43-80bb97f6448a
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: JSON_DATA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FOOT_TRAFFIC_JSON_DATA
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

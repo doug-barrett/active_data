@@ -1,0 +1,227 @@
+fileVersion: 1
+id: e61c821a-d8f1-438a-a8a6-367994a85d60
+name: PSTG_FOOT_TRAFFIC_JSON_DATA
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 697fcf31-f515-40b4-83cf-62035b4d39e7
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        isBusinessKey: true
+        name: country
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af943b68-710c-408d-b43b-329fd4ea40e7
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc8adcc5-17d4-451d-a170-923dc1a7c605
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        name: foot_traffic_count_normalized
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 488b9be2-6e69-4983-80ef-b14f048d41b9
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1fa6d7a-fa42-4937-b323-bc5ba198f3da
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        name: number_of_locations_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b82453d-49bb-4c84-8bd9-ab5bb49f46ec
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4fa3b4dd-df5f-4b4d-9313-752eccfda6be
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        isBusinessKey: true
+        name: state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93296bb2-1c91-457e-9566-4175f84ab819
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4801a435-190a-4ea4-ad6d-182b556b7ff8
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        isBusinessKey: true
+        name: timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55b963f0-9267-4679-9131-d0b28f614487
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d378c44-2473-447b-b08f-c4e66c046934
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: STRING
+        description: ""
+        name: timestamp_interval
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 98886f7b-3212-414e-9084-bb19ad27b941
+                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e280112a-e1ba-4541-a720-05f2bf9fcdda
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ebb81bb-6c55-4954-8ae7-cc5aaf0234b3
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f0b567c-da7a-4cee-b9b2-65abc1e863eb
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35e8d82e-76cc-400d-ab0c-b2b309676b7f
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98c70b31-d1e2-45f9-a282-80ec1004f616
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92563268-318a-4682-97bd-01efeb0f131c
+          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_FOOT_TRAFFIC_JSON_DATA: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: STG_FOOT_TRAFFIC_JSON_DATA
+        join:
+          joinCondition: FROM {{ ref('STAGE', 'STG_FOOT_TRAFFIC_JSON_DATA') }} "STG_FOOT_TRAFFIC_JSON_DATA"
+        name: PSTG_FOOT_TRAFFIC_JSON_DATA
+        noLinkRefs: []
+  name: PSTG_FOOT_TRAFFIC_JSON_DATA
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

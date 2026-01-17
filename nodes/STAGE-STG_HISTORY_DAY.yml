@@ -1,0 +1,866 @@
+fileVersion: 1
+id: 9d627727-3cf9-4429-927d-b40d381cdb59
+name: STG_HISTORY_DAY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd30d867-34bf-4e09-ab0e-c3a8138245a6
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: POSTAL_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 68adbd5c-7b6b-4fc5-bb31-3c3ff2c6c77f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21419e8f-aa7a-491e-a3fd-8c28b6e9fd50
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fdc34037-4292-43ac-beaa-0d9ec4b36193
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa79fe51-f525-42c0-bcbe-e5e910371569
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE_VALID_STD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b4d7a56-56e6-407f-b4fb-c62cf0c0c09f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6da406d-5de7-489e-a7e0-0136e85b8f84
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: DOY_STD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 31f43511-21d6-4020-a744-024b33dd9bf9
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5d6927f-ad3f-4f1f-ba01-5d3ec5676d7b
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_AIR_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80097a40-638f-45f9-938f-9d7f309add75
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a500fc9a-c272-4d1d-a7cd-baf65022a7c6
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_AIR_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a79e1602-829c-48fd-8c73-a504946488c8
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 120e17fd-40f7-41af-872b-2d03796aa9e0
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_AIR_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c15b508-ede0-4c8a-a26d-9a3a9b8b614f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3500067-2ffd-43e0-a886-f65af2f081b2
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_WETBULB_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1d8db693-9879-44f3-b859-6843c03ca6af
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c21ae57-cef4-4a29-be4e-d67c0c41d76a
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_WETBULB_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5617f0c1-4a23-49e9-9890-493be6232388
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc25b37a-ff4f-4ed8-9b94-fc59e027d6bc
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_WETBULB_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f510708b-f58d-4986-8b78-dcdb67507a11
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79ef9f13-e955-414a-8c5f-0cd0d2968587
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_DEWPOINT_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 12d4f417-0d33-4f2a-bdb2-491c060254d9
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2233a883-6dc8-4eb4-9287-4252958bedcf
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_DEWPOINT_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e64fb46-7a41-4ce5-8fc8-a738e7e97266
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 392755c8-0a53-44ef-b50f-b9856f537732
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_DEWPOINT_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f03a6e6-7071-467e-96af-f5e76b13f3f3
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 264ced69-2977-40aa-b907-0449a694b3da
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_FEELSLIKE_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6ca41c74-7bc3-476d-b60e-3fbec0834bee
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cec3a46-3125-46a9-ae8c-8dc79d23e982
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_FEELSLIKE_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55889fdb-6da4-4d10-b651-97819bcf2d0f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbff1f7b-8787-43ff-a6be-939786c4d293
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_FEELSLIKE_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cc7e77-4032-43c4-b512-6d3dc5d15aa6
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 742a15c2-126e-449f-b30a-90f379543f91
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_WINDCHILL_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 026a2667-b848-4b0d-94ae-1ae10e99a3fe
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33f2a698-5553-4af3-9bc8-4e381fbc7de2
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_WINDCHILL_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 964808cf-68d5-4c35-b48c-9a0a3b1aa4d4
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a0717ab-f3d8-4f1f-b1f7-7f8c045aae38
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_WINDCHILL_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c400d94-43c3-40b3-9707-1521e47a0d59
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5cec537-a883-49a5-a3b5-283f197a4111
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_TEMPERATURE_HEATINDEX_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 54a73afa-5479-46a5-9842-623f4914be29
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0cd4c742-8157-49ee-8d5c-56d8c3cf124c
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_TEMPERATURE_HEATINDEX_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 342aa41a-3664-43b8-af65-f142692c4e7e
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9379a437-d340-489f-b101-2ff41f03bdef
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_TEMPERATURE_HEATINDEX_2M_F
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2ea40d3-9fa6-4337-ab6c-2cf106c0e68f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1410d2d4-9d97-4c0b-9829-c88ecb4b1f2d
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: MIN_HUMIDITY_RELATIVE_2M_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 03543375-0d56-4b3d-b7f3-cb5694f955d5
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1031054-cc5f-4467-810d-c70295cd6d22
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: AVG_HUMIDITY_RELATIVE_2M_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c8d9313-ffc6-4804-9917-0a0ed09bd3c4
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21fbd127-1065-4e60-bf88-a95f03e2770e
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: MAX_HUMIDITY_RELATIVE_2M_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78a7e726-d102-4025-be49-0f71be667b37
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ba9572a-8778-4aea-8444-1d71527c2400
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_HUMIDITY_SPECIFIC_2M_GPKG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b67e99e-5a8e-4191-8104-1a267220bc63
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7936787b-e475-4ffd-b2c2-e5f2f7fce651
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_HUMIDITY_SPECIFIC_2M_GPKG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71922ac4-6d30-4f3e-9daa-ee5c0dcfa537
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7831f7d-951f-4c94-ab7f-8662d59c1126
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MAX_HUMIDITY_SPECIFIC_2M_GPKG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3bba2117-723f-40b5-9dcd-3d34145a652e
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 365c56ea-c4a1-4ee3-83cb-1400ddd60861
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: MIN_PRESSURE_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e8a1595e-aa8a-45b8-bcd5-62b9f56f2a5e
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df9de34e-ac7a-43a3-9a08-981da23be9d6
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: AVG_PRESSURE_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e5b5dee5-e4f5-4096-9134-d2f0c805b9b6
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e0e7748-3103-4da2-ab82-a8a41527b9e2
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: MAX_PRESSURE_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be8fe453-53a1-403f-bea0-db5b0efb0640
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82b40859-a8ce-46eb-befa-2857b8eb980b
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MIN_PRESSURE_TENDENCY_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d5d80601-ee9f-462a-9bfa-adb58abe13f1
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7464191-5c0f-43ab-996a-58af9083633c
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: AVG_PRESSURE_TENDENCY_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90125457-13a9-4479-a907-f747d1746598
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b69d6839-53d3-408f-97a7-268de96ceeaa
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MAX_PRESSURE_TENDENCY_2M_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a3753d1e-00dc-46b4-8cc7-37dd3a5ef445
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8c2234c-cd84-4d7d-bd50-9cbd5d4ac1a5
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: MIN_PRESSURE_MEAN_SEA_LEVEL_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3d64ef72-3e93-4a88-8ebe-d9088907a168
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 179a0edf-d93f-47ad-8b31-6eb4304b516f
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: AVG_PRESSURE_MEAN_SEA_LEVEL_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2896a17e-f1ac-404b-8d38-fe7d551f8d27
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c822aa62-0776-4c0f-aa02-af34621f1041
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,2)
+        description: ""
+        name: MAX_PRESSURE_MEAN_SEA_LEVEL_MB
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 976206b5-f203-4a3c-976d-2dda33c4701f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 763c05d9-097a-4e5a-b2ea-1ebe5531da49
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MIN_WIND_SPEED_10M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 33173c7e-5549-4d4c-b485-56ca856a0b7a
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f052a2f1-3c96-4193-aa8e-c047d3e7ec0a
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: AVG_WIND_SPEED_10M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 602ee044-d2fa-496f-84db-e3184c201b6f
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4e39382-5da8-4313-95e8-334ae06a90ab
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MAX_WIND_SPEED_10M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fe26e717-d5c5-432d-ba6c-d3801d010ce6
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 212c7af6-81bb-4922-a197-5994d67b4e34
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: AVG_WIND_DIRECTION_10M_DEG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c49dd0ed-720f-4a9b-b07b-c832dc48b851
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd9454cb-97f0-47a4-a391-623307bd1091
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MIN_WIND_SPEED_80M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d97815e-53e0-4458-bfd0-01f6a87b0414
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4953475d-dd77-46fb-b039-4a14085a6121
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: AVG_WIND_SPEED_80M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e13b827-4d91-4547-ab2b-7d980c58ecd7
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7bc219f-1f65-45a9-8f06-390c5461bdab
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MAX_WIND_SPEED_80M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3b798d8-75fd-4310-b389-01dc50e583d5
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47295103-7433-44ac-95eb-574907d20197
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: AVG_WIND_DIRECTION_80M_DEG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f9d1de3e-b661-4426-aac7-b8e2b5d38537
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5db0a572-337a-46a7-862c-30ea99d45f1f
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MIN_WIND_SPEED_100M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ec289da4-7fb1-4ea7-b30a-4300503b7f0b
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00f9a7bc-c0a4-49dd-ac46-fad01d71c346
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: AVG_WIND_SPEED_100M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eb25699c-a459-471d-bd3f-f02d4fd403a8
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df6ffb2b-f63b-4ae6-978f-be123a9528c4
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: MAX_WIND_SPEED_100M_MPH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fcfee92a-c050-4d75-9cc7-1babc7b11bca
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca5bd0bd-14bb-483a-9fc3-6a9f3d42f685
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: AVG_WIND_DIRECTION_100M_DEG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e4ba0ca2-1ae3-4f93-b982-fe495b09afd9
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c8a3554-9589-45f1-89b4-e35b72c401bd
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,2)
+        description: ""
+        name: TOT_PRECIPITATION_IN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49d4e3fe-fb1f-4f77-b134-4d90331d5f1d
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f7bde96-c116-46d1-a12a-cff5bcb74f79
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,2)
+        description: ""
+        name: TOT_SNOWFALL_IN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b8a4eae-d90d-491d-b790-20c9a4727a7c
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d2b6330-f462-4b22-a3d7-d3b5196422dd
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(4,1)
+        description: ""
+        name: TOT_SNOWDEPTH_IN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24164329-b153-48c4-bb6c-096a1f7543aa
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 469ef615-afea-4fa8-8998-d1055db56bd1
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: MIN_CLOUD_COVER_TOT_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e6db814f-b5f0-40fa-a85a-068438ab0b73
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65ca6f6c-cbef-47bb-8a12-f3a2dc4a7065
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: AVG_CLOUD_COVER_TOT_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af0ee822-7772-4539-92de-76cb16a33c6a
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0bc5978a-4804-44ff-b7d6-0f4591a77246
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: MAX_CLOUD_COVER_TOT_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 027609d1-991a-46ce-a800-8f8abaae8db0
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 251f84cb-ecea-4529-b85e-6420f285f8be
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: MIN_RADIATION_SOLAR_TOTAL_WPM2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e1c3ccf-9778-4aae-8640-1841725d7273
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88146a91-bc56-47ca-b58a-bbea848718b2
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(5,1)
+        description: ""
+        name: AVG_RADIATION_SOLAR_TOTAL_WPM2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a16d8f5-8369-4581-a242-f5dde7485738
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96932456-428a-4a34-89a8-8337e0ced1ef
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(6,1)
+        description: ""
+        name: MAX_RADIATION_SOLAR_TOTAL_WPM2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6116de4-9fbc-4a49-b3c5-eddb99536294
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb870db6-d7f6-4f76-9a0e-a443100a91d9
+          stepCounter: 9d627727-3cf9-4429-927d-b40d381cdb59
+        config: {}
+        dataType: NUMBER(7,1)
+        description: ""
+        name: TOT_RADIATION_SOLAR_TOTAL_WPM2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c98cc702-45f1-46fe-acee-b1b977afd203
+                stepCounter: b8a32d37-6d28-4b41-9167-5f30f158724c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          HISTORY_DAY: b8a32d37-6d28-4b41-9167-5f30f158724c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_WEATHER
+            nodeName: HISTORY_DAY
+        join:
+          joinCondition: FROM {{ ref('SRC_WEATHER', 'HISTORY_DAY') }} "HISTORY_DAY"
+        name: STG_HISTORY_DAY
+        noLinkRefs: []
+  name: STG_HISTORY_DAY
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
