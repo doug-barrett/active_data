@@ -1,0 +1,54 @@
+fileVersion: 1
+id: d33b69b3-1b26-4caa-b23a-095130b0e99b
+name: NYC_RATE_CODE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a437916-e6a8-462c-8c06-0de84ee4917a
+          stepCounter: d33b69b3-1b26-4caa-b23a-095130b0e99b
+        config: {}
+        dataType: NUMBER(2,0)
+        defaultValue: ""
+        description: ""
+        name: RATE_CODE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: febbbbfb-96d6-469b-b75a-e71cc892cf97
+          stepCounter: d33b69b3-1b26-4caa-b23a-095130b0e99b
+        config: {}
+        dataType: VARCHAR(21)
+        defaultValue: ""
+        description: ""
+        name: RATE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: NYC_RATE_CODE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

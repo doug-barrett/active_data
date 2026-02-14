@@ -1,0 +1,71 @@
+fileVersion: 1
+id: 14d6febd-6f65-4ddf-ae45-fdb91cc90497
+name: API_CAISO_RENEWABLES
+operation:
+  config:
+    extIntegration: COALESCE_API_INTEGRATION_DB
+    headers: ""
+    method: get
+    payload: ""
+    uri: https://api.gridstatus.io/v1/datasets/caiso_renewables_hourly/query?start_time=2026-02-10&end_time=2026-02-13&timezone=market&api_key=0195295a422e43d6ac1a1b2308f79ab7
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 224c45d7-c081-4179-8afa-d7910a557632
+          stepCounter: 14d6febd-6f65-4ddf-ae45-fdb91cc90497
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: URI
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        uri: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01dc5f5d-a988-434a-863d-1067632b348e
+          stepCounter: 14d6febd-6f65-4ddf-ae45-fdb91cc90497
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: RESPONSE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        value: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: API_CAISO_RENEWABLES
+        noLinkRefs: []
+  name: API_CAISO_RENEWABLES
+  overrideSQL: false
+  schema: ""
+  sqlType: External:::303
+  type: sql
+  version: 1
+type: Node

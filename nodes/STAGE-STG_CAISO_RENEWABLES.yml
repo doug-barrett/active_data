@@ -1,0 +1,206 @@
+fileVersion: 1
+id: 072805d1-c6ab-4305-9a08-cbc296dab046
+name: STG_CAISO_RENEWABLES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92ca2947-c33b-4c18-a8e8-4ee04d698233
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: URI
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 224c45d7-c081-4179-8afa-d7910a557632
+                stepCounter: 14d6febd-6f65-4ddf-ae45-fdb91cc90497
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a204fb2-6519-4f48-b145-9556a22a4f8e
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: DATASET_METATIMEZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_RENEWABLES\".\"RESPONSE\":\"dataset_metadata\".\"data_timezone\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4258bd09-024f-4453-b72b-fd955887baba
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: DATASET_METANAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_RENEWABLES\".\"RESPONSE\":\"dataset_metadata\".\"name\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 468e25ff-4819-4c1f-bc5d-9ee3348a12c1
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: INTERVAL_END_LOCAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_end_local\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c43e9ff6-19c6-4e52-b914-1ab0eb0646a6
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: INTERVAL_END_UTC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_end_utc\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ccae996e-db3d-4c6d-a5ce-6f12ef989b51
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: INTERVAL_START_LOCAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_start_local\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cadf973-8ae4-4e5d-9ee2-cc5228df10f5
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: INTERVAL_START_UTC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_start_utc\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fdc8a8f-aec4-49d8-913d-6efe80c4187c
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: STRING
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"location\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba51e8ad-11e4-495b-9e36-84ce7786c07d
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: SOLAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"solar\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a9e8807-7271-454a-9798-566de264327e
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: WIND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"wind\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ebdb6e7-b42f-4a17-9f3c-296682d96675
+          stepCounter: 072805d1-c6ab-4305-9a08-cbc296dab046
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: STATUS_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_RENEWABLES\".\"RESPONSE\":\"status_code\"::DOUBLE"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          API_CAISO_RENEWABLES: 14d6febd-6f65-4ddf-ae45-fdb91cc90497
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: API_CAISO_RENEWABLES
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGE', 'API_CAISO_RENEWABLES') }} "API_CAISO_RENEWABLES", 
+            lateral flatten(input => "RESPONSE":"data", OUTER => TRUE) "RESPONSE_data"
+        name: STG_CAISO_RENEWABLES
+        noLinkRefs: []
+  name: STG_CAISO_RENEWABLES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,135 @@
+fileVersion: 1
+id: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+name: DIM_NYC_DROPOFF_LOCATION
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DWH
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35b84ac8-b429-46cd-a1e3-5a2d9065c3c2
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_NYC_DROPOFF_LOCATION_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ecafd0a-50ba-470a-afad-c592b316f73b
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60c24efe-c710-4eb5-bbf7-d9eaf4c9f7fd
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a2000b5-010d-410e-a471-5ab29a699564
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1acc0e1d-d766-4abe-8a80-2b45ab0350c6
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BOROUGH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f49af38-60ce-4a9c-947e-6274f05375a9
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f2238a5-4194-4630-87e6-f799176c2d1c
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 89447066-334f-49e5-963b-0c8e9c191c54
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25ca3ac1-7468-4ccc-aca9-e6a8babfc6fc
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SERVICE_ZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4c5d0aff-1b4b-4b27-be14-645a7a886c90
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ad30739-1552-48e2-8b3f-2b2fdee08215
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FILENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a45a2ef-05be-48ab-bf9a-b97ff3b912fa
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb552e50-bd82-498e-9f74-a61fd5c1385e
+          stepCounter: cd2e5f0c-e855-4f51-b9ec-e4867751927b
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f0309daf-ec88-41ad-9aca-8017aae7ebc6
+                stepCounter: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DIM_NYC_PICK_UP_LOCATIONS: 44ae5fe9-7055-4d89-b467-02605c9f5a5d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DWH
+            nodeName: DIM_NYC_PICK_UP_LOCATIONS
+        join:
+          joinCondition: FROM {{ ref('DWH', 'DIM_NYC_PICK_UP_LOCATIONS') }} "DIM_NYC_PICK_UP_LOCATIONS"
+        name: DIM_NYC_DROPOFF_LOCATION
+        noLinkRefs: []
+  name: DIM_NYC_DROPOFF_LOCATION
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

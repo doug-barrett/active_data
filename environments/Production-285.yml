@@ -4,6 +4,12 @@ mappingDefinitions:
   DWH:
     database: LIVE_DATA
     schema: GOLD
+  PUBLIC:
+    database: ""
+    schema: ""
+  RAW:
+    database: ""
+    schema: ""
   SRC_RETAIL:
     database: UNITED_STATES_RETAIL_FOOT_TRAFFIC_DATA
     schema: PUBLIC

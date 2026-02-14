@@ -1,0 +1,110 @@
+fileVersion: 1
+id: 18e8003b-7f42-4248-ae3f-70e78abd74de
+name: STG_NYC_PICK_UP_LOCATIONS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7927596d-8c67-41e2-93bd-ffc395e58a4b
+          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dc2f3429-1105-4939-93a4-6a6313344135
+                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a62c77d1-ca27-4d2d-b45d-e43430a47dbc
+          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BOROUGH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e6bfa3d-653d-4ada-a31e-3bd3778d6173
+                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f987e6f-ab08-431d-9b2a-f42f3d8c0ccd
+          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e77d613-9837-4c0d-bc25-df099cb48444
+                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad1999ef-0879-4ada-9cb9-2408f90e6616
+          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SERVICE_ZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 51a45e55-7d3e-4799-8c4a-23cf5d53a3cb
+                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3eef9011-f548-4728-9bf7-edc1a1b3adf4
+          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FILENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2727f503-06a8-41b9-a01b-5bb1ca1cc905
+                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          EXT_NYC_PICK_UP_LOCATIONS: 5e60000d-4ff9-4a40-b169-66d055866225
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: EXT_NYC_PICK_UP_LOCATIONS
+        join:
+          joinCondition: FROM {{ ref('STAGE', 'EXT_NYC_PICK_UP_LOCATIONS') }} "EXT_NYC_PICK_UP_LOCATIONS"
+        name: STG_NYC_PICK_UP_LOCATIONS
+        noLinkRefs: []
+  name: STG_NYC_PICK_UP_LOCATIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

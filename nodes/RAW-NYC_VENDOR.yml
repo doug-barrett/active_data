@@ -1,0 +1,54 @@
+fileVersion: 1
+id: e837d8de-1362-49f6-850f-3240c85a0f55
+name: NYC_VENDOR
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1313b5a9-3bb8-4731-9609-0e3fdadf262d
+          stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+        config: {}
+        dataType: NUMBER(1,0)
+        defaultValue: ""
+        description: ""
+        name: VENDOR_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 751e2190-885a-4c79-91cd-136fe1626a2d
+          stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+        config: {}
+        dataType: VARCHAR(33)
+        defaultValue: ""
+        description: ""
+        name: VENDOR_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: NYC_VENDOR
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

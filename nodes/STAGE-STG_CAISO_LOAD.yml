@@ -1,0 +1,446 @@
+fileVersion: 1
+id: 140e0bca-4733-432a-b152-9bfa7dd99a39
+name: STG_CAISO_LOAD
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 243ed1c5-5210-401f-a3dd-8c82c22fa787
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: URI
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 395c4af0-fc80-45c5-8509-485aba9b0c4f
+                stepCounter: 52251973-c62f-4d0c-abf1-a5c05109901e
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5188f927-78ed-4ac0-ab2c-d209f46676bb
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: dataset_metadata_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_LOAD\".\"RESPONSE\":\"dataset_metadata\".\"name\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c46c6fa-a553-45da-bb0a-011fa10b1cc6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: dataset_metadata_publish_time_column
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_LOAD\".\"RESPONSE\":\"dataset_metadata\".\"publish_time_column\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0afe4551-44e4-4ecb-8346-b722962c10ec
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: dataset_metadata_subseries_index_column
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_LOAD\".\"RESPONSE\":\"dataset_metadata\".\"subseries_index_column\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 986df2ba-0662-4d95-8320-0ebfefe5f4d4
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: dataset_metadata_time_index_column
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"API_CAISO_LOAD\".\"RESPONSE\":\"dataset_metadata\".\"time_index_column\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b9cd0d1-25d0-4c9c-a179-70f6a7304081
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.batteries
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.batteries\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cca33248-fea1-494b-8756-93849bc56a41
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.biogas
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.biogas\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75e5c380-b7d4-42d2-8393-88b361dea4f6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.biomass
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.biomass\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc286e27-d3a8-4d1a-aafa-c8a4f5e7ee36
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.coal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.coal\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9028d192-4358-4cdf-9cd7-2fb7b9e458dc
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.geothermal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.geothermal\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56d3976f-6f65-412c-80f3-43a6f77c7907
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.imports
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.imports\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2fe8c23-54d6-4e00-b677-c3c082b19937
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.large_hydro
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.large_hydro\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfd08c52-b432-4e7d-b096-665c348ab7a2
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.natural_gas
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.natural_gas\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18770a5b-9a17-4127-acea-0bee05a7dd31
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.nuclear
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.nuclear\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56e5b01a-3ef7-48ce-b86e-b210f76bebc6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.other
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.other\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9fe042c-b1e7-4f3d-b61e-c6f7125fd1ea
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.small_hydro
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.small_hydro\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7cdccd70-0cd4-42f0-8cce-0b435e8cfae6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.solar
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.solar\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 094e9df3-3709-40cd-a03f-361c453e0e21
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_fuel_mix.wind
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"fuel_mix.wind\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55e07050-69f6-45b6-af4f-ed48496e732d
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: data_interval_end_local
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_end_local\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffe759c2-2b5a-4c89-8e6f-9b3a7544d4f6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: data_interval_end_utc
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_end_utc\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e66af895-47f4-4ff8-a35a-841a2681ad2d
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: data_interval_start_local
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_start_local\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a275f80a-16e6-4f56-aa3e-87479d06fdd2
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: STRING
+        description: ""
+        name: data_interval_start_utc
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"interval_start_utc\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90a6d074-5bad-4827-aa0f-5d271ec5dda6
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_load.load
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"load.load\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63c2dcac-aa89-4140-a80f-4268b6598130
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_load_forecast.load_forecast
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"load_forecast.load_forecast\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 173a7d40-36f4-439e-921e-077fdc8efcc0
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_net_load
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"net_load\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: adb0219c-7a6a-4810-9e0a-e203849fc2b3
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_renewables
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"renewables\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b915922b-6ddd-4b17-9d52-ec17af32bb0b
+          stepCounter: 140e0bca-4733-432a-b152-9bfa7dd99a39
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: data_renewables_to_load_ratio
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"RESPONSE_data\".value:\"renewables_to_load_ratio\"::DOUBLE"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          API_CAISO_LOAD: 52251973-c62f-4d0c-abf1-a5c05109901e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: API_CAISO_LOAD
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGE', 'API_CAISO_LOAD') }} "API_CAISO_LOAD", 
+            lateral flatten(input => "RESPONSE":"data", OUTER => TRUE) "RESPONSE_data"
+        name: STG_CAISO_LOAD
+        noLinkRefs: []
+  name: STG_CAISO_LOAD
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

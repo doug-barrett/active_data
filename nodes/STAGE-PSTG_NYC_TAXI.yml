@@ -1,0 +1,381 @@
+fileVersion: 1
+id: 377bd149-75a2-4f68-8d57-67bb04897ae3
+name: PSTG_NYC_TAXI
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d3ba05c-acab-4de7-a195-5629ce700cf8
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: STRING
+        description: ""
+        name: FILE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7292560-a991-430c-95e3-2c2ed8f0927e
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ecddead-cf86-4609-bd8f-0a09c06807a2
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: AIRPORT_FEE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56a28cca-d4de-479f-a7e4-63a7f6a71606
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9621b135-09df-40b6-911f-4876133df6c4
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: CBD_CONGESTION_FEE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 33bd954a-0e90-4983-8537-770689756a24
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 131f2f9e-537b-4dd8-bd0e-e8efd2c0ccf2
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: CONGESTION_SURCHARGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b2b24c2-e492-4f1e-9d59-e0e2681fa968
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d680409-b903-4e3e-a9d4-4590b4b0a036
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: DO_LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b869dab-b5a8-4a61-bf09-ae97fc603b10
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f0d2b77-811c-4dd3-b865-ebc8434f8e40
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: EXTRA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58024019-8224-412b-a88b-d52044d5f9b4
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8404c51b-b75e-4ded-bb4d-0af98495e701
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: FARE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba40d0a3-30ef-4fa7-a956-691dfa5504fc
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88442555-a18d-4897-89a5-f0e976711e6c
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: IMPROVEMENT_SURCHARGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1dfdeaf6-b936-40e6-a17d-01772618d2be
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 196299df-b61e-4b7c-97d1-667ce5b823a5
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: MTA_TAX
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bd6a3028-2334-4d98-819d-4a28e5c1153c
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da16858b-ab36-4b53-ab27-118d3840d316
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: PASSENGER_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13708a4f-6093-456c-85ca-eb55a8b1c771
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d2ded3f-24ba-4d4e-aaaa-acf1dc32bc59
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: PAYMENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ad7b7d1-24c7-43dc-a4d3-9aa67d460b0d
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a467f284-1460-43c1-a3a7-71fad15dd07f
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: PU_LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2233a91-5c65-453a-9368-6bcb82ffdd36
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20fe4b38-5b5a-4c1d-8525-228c7310c6c3
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: RATE_CODE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e94c968-3edc-4542-bd4b-5d6cb9db86f0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a81ecb3-0708-46ce-8381-c28083fd261b
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STORE_AND_FWD_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77bae90f-46fb-4ebb-8c54-e916e451d2ea
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e4c1525-1a60-47d6-8a93-d7fd37b90af0
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TIP_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d3d0a94b-a6ca-40fb-9db0-b151ce0ba824
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2946e34b-33a8-4fab-8cb9-6bee955657f9
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TOLLS_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fdde8496-5e4b-41eb-9e27-deaaa41244dd
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f4345d1-4c09-4928-bc5a-47bdb9dc0c04
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dcbd0879-e7c3-4778-a7b5-3c243c5aee44
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79372434-6879-498a-a926-a18dae1f65a3
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TPEP_PICKUP_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73bcc8b2-9405-49c3-b79c-4e6dfe6d9ce5
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a95ce76-93bd-499f-a052-b1bc77341b17
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: TIMESTAMP_TZ
+        description: ""
+        name: PICKUP_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73bcc8b2-9405-49c3-b79c-4e6dfe6d9ce5
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_pickup_datetime")::BIGINT, 6)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10f97c43-13d9-46b9-80f8-31af7ee21725
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TPEP_DROPOFF_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b55bfb81-4266-40b8-8a4e-17629da23f87
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: TIMESTAMP_TZ
+        description: ""
+        name: DROPOFF_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_dropoff_datetime")::BIGINT, 6)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 969df1ab-578c-4004-97b5-5b53feccee72
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TRIP_DISTANCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7eeaa74-2f9f-430c-a8f9-44b00b15b6dc
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 995f8f73-b1fd-4247-b496-14bbd2c91b8f
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: VENDOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c1b7a9b-8e4d-4ac9-aa4b-2114ff546a00
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f3c5f3b-2676-4513-af30-5bdb1c46c58d
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_NYC_TAXI: 611def4b-7035-49f1-8373-2bbd1d44d453
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: STG_NYC_TAXI
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGE', 'STG_NYC_TAXI') }} "STG_NYC_TAXI"
+            WHERE "STG_NYC_TAXI".FILENAME NOT IN (SELECT DISTINCT FILE_NAME FROM {{this}})
+        name: PSTG_NYC_TAXI
+        noLinkRefs:
+          - locationName: STAGE
+            nodeName: PSTG_NYC_TAXI
+  name: PSTG_NYC_TAXI
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

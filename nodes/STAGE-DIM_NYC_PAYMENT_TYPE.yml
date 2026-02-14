@@ -1,0 +1,118 @@
+fileVersion: 1
+id: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+name: DIM_NYC_PAYMENT_TYPE
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c6edfcd-19f9-4a48-99a1-4d66d2004bf2
+          stepCounter: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_NYC_PAYMENT_TYPE_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a528bec-0a78-4b31-92b9-7df540b7842c
+          stepCounter: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+        config: {}
+        dataType: NUMBER(1,0)
+        description: ""
+        isBusinessKey: true
+        name: PAYMENT_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d92b7090-c742-46fc-8c9f-eedba755c0de
+                stepCounter: a8af04ed-80c0-4205-9798-c2e764ba2dea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73446d26-a650-4191-bf85-a88d76ad1e7a
+          stepCounter: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+        config: {}
+        dataType: VARCHAR(14)
+        description: ""
+        name: PAYMENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac58115b-522b-4d8e-8e0d-41361d2efa58
+                stepCounter: a8af04ed-80c0-4205-9798-c2e764ba2dea
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 595a6c48-f3c1-4438-a851-081e205b5bbb
+          stepCounter: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbeb5603-c294-42e9-98fe-a548e6aafe3a
+          stepCounter: fefccefd-3b0a-46eb-b84f-17b48347cfa7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_NYC_PAYMENT_TYPE: a8af04ed-80c0-4205-9798-c2e764ba2dea
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGE
+            nodeName: STG_NYC_PAYMENT_TYPE
+        join:
+          joinCondition: FROM {{ ref('STAGE', 'STG_NYC_PAYMENT_TYPE') }} "STG_NYC_PAYMENT_TYPE"
+        name: DIM_NYC_PAYMENT_TYPE
+        noLinkRefs: []
+  name: DIM_NYC_PAYMENT_TYPE
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

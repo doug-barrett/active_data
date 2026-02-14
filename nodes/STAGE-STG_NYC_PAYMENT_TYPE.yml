@@ -1,0 +1,68 @@
+fileVersion: 1
+id: a8af04ed-80c0-4205-9798-c2e764ba2dea
+name: STG_NYC_PAYMENT_TYPE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d92b7090-c742-46fc-8c9f-eedba755c0de
+          stepCounter: a8af04ed-80c0-4205-9798-c2e764ba2dea
+        config: {}
+        dataType: NUMBER(1,0)
+        description: ""
+        name: PAYMENT_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56377fd5-8ac7-4498-bcc7-e2d12879376d
+                stepCounter: 6225012a-4004-48f6-8275-005e6f52315f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac58115b-522b-4d8e-8e0d-41361d2efa58
+          stepCounter: a8af04ed-80c0-4205-9798-c2e764ba2dea
+        config: {}
+        dataType: VARCHAR(14)
+        description: ""
+        name: PAYMENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04af1d10-99e0-47cc-9578-7a41c867c16c
+                stepCounter: 6225012a-4004-48f6-8275-005e6f52315f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          NYC_PAYMENT_TYPE: 6225012a-4004-48f6-8275-005e6f52315f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW
+            nodeName: NYC_PAYMENT_TYPE
+        join:
+          joinCondition: FROM {{ ref('RAW', 'NYC_PAYMENT_TYPE') }} "NYC_PAYMENT_TYPE"
+        name: STG_NYC_PAYMENT_TYPE
+        noLinkRefs: []
+  name: STG_NYC_PAYMENT_TYPE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
