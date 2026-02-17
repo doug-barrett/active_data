@@ -4,7 +4,7 @@ name: FCT_YELLOW_CAB_TRIPS
 operation:
   config:
     postSQL: ""
-    preSQL: ""
+    preSQL: DELETE FROM {{this}} WHERE TO_DATE(PICKUP_DATETIME) IN (SELECT DISTINCT TO_DATE(PICKUP_DATETIME) FROM {{ref('SILVER', 'STG_YELLOW_CAB_TRIPS1')}})
     testsEnabled: true
   database: ""
   deployEnabled: true
