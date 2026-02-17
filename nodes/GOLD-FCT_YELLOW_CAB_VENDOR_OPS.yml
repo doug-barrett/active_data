@@ -17,25 +17,12 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 19e3ac05-5334-49f7-a2fc-676ff4f45560
-          stepCounter: a936c9f5-46a0-42cc-8c4f-e9c6fce9e405
-        config: {}
-        dataType: NUMBER
-        description: ""
-        name: MONTH
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: f4928708-094c-469a-a6f8-ff4d3a3184cd
-                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: e6bdcfcc-ca74-44f2-9468-e1c9171d90d1
           stepCounter: a936c9f5-46a0-42cc-8c4f-e9c6fce9e405
         config: {}
         dataType: FLOAT
         description: ""
+        isBusinessKey: true
         name: VENDOR_ID
         nullable: true
         sourceColumnReferences:
@@ -64,11 +51,27 @@ operation:
         config: {}
         dataType: NUMBER
         description: ""
+        isBusinessKey: true
         name: YEAR
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: b753f74a-3e72-444c-93c8-fb2825fa46e9
+                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19e3ac05-5334-49f7-a2fc-676ff4f45560
+          stepCounter: a936c9f5-46a0-42cc-8c4f-e9c6fce9e405
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: true
+        name: MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4928708-094c-469a-a6f8-ff4d3a3184cd
                 stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
             transform: ""
       - appliedColumnTests: {}

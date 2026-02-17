@@ -22,6 +22,7 @@ operation:
         config: {}
         dataType: FLOAT
         description: ""
+        isBusinessKey: true
         name: VENDOR_ID
         nullable: true
         sourceColumnReferences:
@@ -50,6 +51,7 @@ operation:
         config: {}
         dataType: NUMBER
         description: ""
+        isBusinessKey: true
         name: YEAR
         nullable: true
         sourceColumnReferences:
@@ -64,6 +66,7 @@ operation:
         config: {}
         dataType: NUMBER
         description: ""
+        isBusinessKey: true
         name: MONTH
         nullable: true
         sourceColumnReferences:
