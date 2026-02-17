@@ -2,20 +2,17 @@ fileVersion: 1
 id: "285"
 mappingDefinitions:
   BRONZE:
-    database: ""
-    schema: ""
+    database: NY_TAXI
+    schema: LAND
   GOLD:
-    database: ""
-    schema: ""
+    database: DOUG_DB
+    schema: PRD_GOLD
   PUBLIC:
-    database: ""
-    schema: ""
-  RAW:
-    database: ""
-    schema: ""
+    database: DOUG_DB
+    schema: PUBLIC
   SILVER:
-    database: ""
-    schema: ""
+    database: DOUG_DB
+    schema: DEV_SILVER
   SRC_WEATHER:
     database: GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI
     schema: STANDARD_TILE
