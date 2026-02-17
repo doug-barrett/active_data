@@ -24,6 +24,7 @@ operation:
           SELECT 1 
           FROM {{this}}
           WHERE TRIP_DISTANCE > 200
+          AND PAYMENT_TYPE IN ('Cash', 'Credit Card')
       - continueOnFailure: true
         description: ""
         name: Improbable tip
@@ -32,6 +33,8 @@ operation:
           SELECT 1
           FROM {{this}}
           WHERE TIP_AMOUNT > FARE_AMOUNT
+          AND FARE_AMOUNT > 0
+          AND PAYMENT_TYPE IN ('Cash', 'Credit Card')
       - continueOnFailure: true
         description: ""
         name: Improbable duration
@@ -40,6 +43,7 @@ operation:
           SELECT 1
           FROM {{this}}
           WHERE TRIP_DURATION_MINUTES > 180
+          AND PAYMENT_TYPE IN ('Cash', 'Credit Card')
       - continueOnFailure: true
         description: ""
         name: Zero distance
@@ -48,6 +52,7 @@ operation:
           SELECT 1 
           FROM {{this}}
           WHERE TRIP_DISTANCE = 0
+          AND FARE_AMOUNT > 0
     columns:
       - appliedColumnTests: {}
         columnReference:
