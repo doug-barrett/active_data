@@ -1,23 +1,23 @@
 fileVersion: 1
 id: "285"
 mappingDefinitions:
-  DWH:
-    database: LIVE_DATA
-    schema: GOLD
+  BRONZE:
+    database: ""
+    schema: ""
+  GOLD:
+    database: ""
+    schema: ""
   PUBLIC:
     database: ""
     schema: ""
   RAW:
     database: ""
     schema: ""
-  SRC_RETAIL:
-    database: UNITED_STATES_RETAIL_FOOT_TRAFFIC_DATA
-    schema: PUBLIC
+  SILVER:
+    database: ""
+    schema: ""
   SRC_WEATHER:
     database: GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI
     schema: STANDARD_TILE
-  STAGE:
-    database: LIVE_DATA
-    schema: SILVER
 name: Production
 type: Environment

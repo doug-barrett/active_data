@@ -1,11 +1,11 @@
 fileVersion: 1
-id: d33b69b3-1b26-4caa-b23a-095130b0e99b
-name: NYC_RATE_CODE
+id: 5d63e4c0-022d-49a2-95cd-8c2af5b74ba7
+name: PAYMENT_TYPE
 operation:
   database: ""
   deployEnabled: true
   description: ""
-  locationName: RAW
+  locationName: BRONZE
   metadata:
     columns:
       - acceptedValues:
@@ -13,13 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9a437916-e6a8-462c-8c06-0de84ee4917a
-          stepCounter: d33b69b3-1b26-4caa-b23a-095130b0e99b
+          columnCounter: 63c1b7d9-e018-4d0a-a052-48399dd29440
+          stepCounter: 5d63e4c0-022d-49a2-95cd-8c2af5b74ba7
         config: {}
-        dataType: NUMBER(2,0)
+        dataType: NUMBER(1,0)
         defaultValue: ""
         description: ""
-        name: RATE_CODE_ID
+        name: PAYMENT_TYPE_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -32,13 +32,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: febbbbfb-96d6-469b-b75a-e71cc892cf97
-          stepCounter: d33b69b3-1b26-4caa-b23a-095130b0e99b
+          columnCounter: 94fc07a6-6e5d-4c63-84dd-32fd4ceed07c
+          stepCounter: 5d63e4c0-022d-49a2-95cd-8c2af5b74ba7
         config: {}
-        dataType: VARCHAR(21)
+        dataType: VARCHAR(14)
         defaultValue: ""
         description: ""
-        name: RATE_CODE
+        name: PAYMENT_TYPE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -46,7 +46,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: NYC_RATE_CODE
+  name: PAYMENT_TYPE
   schema: ""
   sqlType: Source
   type: sourceInput

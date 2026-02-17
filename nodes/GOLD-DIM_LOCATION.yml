@@ -1,6 +1,6 @@
 fileVersion: 1
-id: e61c821a-d8f1-438a-a8a6-367994a85d60
-name: PSTG_FOOT_TRAFFIC_JSON_DATA
+id: 71a23170-60d6-4664-9108-7052a7a4919a
+name: DIM_LOCATION
 operation:
   config:
     postSQL: ""
@@ -10,105 +10,106 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STAGE
+  locationName: GOLD
   materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb31941c-5bfd-417d-a170-954afbf42e19
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_LOCATION_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 697fcf31-f515-40b4-83cf-62035b4d39e7
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 96e4dc4e-f2af-4316-be5d-7f1aa045c30b
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
-        dataType: STRING
+        dataType: NUMBER(3,0)
         description: ""
         isBusinessKey: true
-        name: country
+        name: LOCATION_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: af943b68-710c-408d-b43b-329fd4ea40e7
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+              - columnCounter: 2c589608-1a37-49e6-8b90-53c0c0ab5156
+                stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bc8adcc5-17d4-451d-a170-923dc1a7c605
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 295055ba-3f58-45f7-90c6-678d0366b626
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         description: ""
-        name: foot_traffic_count_normalized
+        name: BOROUGH
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 488b9be2-6e69-4983-80ef-b14f048d41b9
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+              - columnCounter: cbbd6d53-f995-4710-99e7-2ba1ad15933d
+                stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d1fa6d7a-fa42-4937-b323-bc5ba198f3da
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 85cdf3f5-cb44-4f6d-a05b-a9b237d6475e
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         description: ""
-        name: number_of_locations_description
+        name: ZONE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2b82453d-49bb-4c84-8bd9-ab5bb49f46ec
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+              - columnCounter: 80543009-4bc8-47f5-85e9-1a631b432d58
+                stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 4fa3b4dd-df5f-4b4d-9313-752eccfda6be
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 58e8712f-b707-476a-a5a5-bef86fc6a190
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
-        name: state
+        name: SERVICE_ZONE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 93296bb2-1c91-457e-9566-4175f84ab819
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+              - columnCounter: d326ec5e-570c-4fba-95b1-a625f8ea1447
+                stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 4801a435-190a-4ea4-ad6d-182b556b7ff8
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 2db0e238-71ef-464c-b04a-e0e80625c282
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
-        name: timestamp
+        name: FILENAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 55b963f0-9267-4679-9131-d0b28f614487
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3d378c44-2473-447b-b08f-c4e66c046934
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
-        config: {}
-        dataType: STRING
-        description: ""
-        name: timestamp_interval
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 98886f7b-3212-414e-9084-bb19ad27b941
-                stepCounter: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+              - columnCounter: 0bc98113-19d1-4586-9418-77ffb20d065f
+                stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
             transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e280112a-e1ba-4541-a720-05f2bf9fcdda
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 6229aa0a-6056-4280-8268-38da87f8f2bf
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -124,8 +125,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1ebb81bb-6c55-4954-8ae7-cc5aaf0234b3
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 6ab3b4ca-4524-446b-982a-3840f81e819c
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: VARCHAR
         defaultValue: ""
@@ -141,8 +142,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3f0b567c-da7a-4cee-b9b2-65abc1e863eb
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 43ee85b2-cdd3-47b9-84a0-d45db66ee876
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -158,8 +159,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 35e8d82e-76cc-400d-ab0c-b2b309676b7f
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 7c1e9705-6c62-44bd-b569-b7e181173b14
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -175,8 +176,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 98c70b31-d1e2-45f9-a282-80ec1004f616
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: b10f1b2b-cb6c-477c-8cf0-f9678354bde4
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -192,8 +193,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 92563268-318a-4682-97bd-01efeb0f131c
-          stepCounter: e61c821a-d8f1-438a-a8a6-367994a85d60
+          columnCounter: 9a7f1365-a54a-40c4-ba95-7f9e0ef3097a
+          stepCounter: 71a23170-60d6-4664-9108-7052a7a4919a
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -208,20 +209,20 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_FOOT_TRAFFIC_JSON_DATA: d56ec08e-9fda-4f4f-bbdd-2fa54f8f8662
+          STG_LOCATION: de263dd4-d12c-4a97-8958-18f8f17a7d62
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STAGE
-            nodeName: STG_FOOT_TRAFFIC_JSON_DATA
+          - locationName: SILVER
+            nodeName: STG_LOCATION
         join:
-          joinCondition: FROM {{ ref('STAGE', 'STG_FOOT_TRAFFIC_JSON_DATA') }} "STG_FOOT_TRAFFIC_JSON_DATA"
-        name: PSTG_FOOT_TRAFFIC_JSON_DATA
+          joinCondition: FROM {{ ref('SILVER', 'STG_LOCATION') }} "STG_LOCATION"
+        name: DIM_LOCATION
         noLinkRefs: []
-  name: PSTG_FOOT_TRAFFIC_JSON_DATA
+  name: DIM_LOCATION
   overrideSQL: false
   schema: ""
-  sqlType: persistentStage
+  sqlType: Dimension
   type: sql
   version: 1
 type: Node

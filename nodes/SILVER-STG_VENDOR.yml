@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 20c95f68-dc80-48a0-86c5-74a85344303a
-name: STG_NYC_VENDOR
+id: e8d0ce9f-896c-4484-b131-fc1f54540898
+name: STG_VENDOR
 operation:
   config:
     insertStrategy: INSERT
@@ -12,15 +12,15 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STAGE
-  materializationType: view
+  locationName: SILVER
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b81887fd-1dac-452c-b323-fcd3c8b2ab8e
-          stepCounter: 20c95f68-dc80-48a0-86c5-74a85344303a
+          columnCounter: 881e835a-f491-4408-a71e-10a89b802445
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
         config: {}
         dataType: NUMBER(1,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1313b5a9-3bb8-4731-9609-0e3fdadf262d
-                stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+              - columnCounter: 1136f84d-1bc0-4fb9-a36e-1cbdc27ae6bb
+                stepCounter: 0c6fa26d-e625-4240-aa4b-13642ea503d6
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6639d712-32cb-44f6-91fb-113ada72b20b
-          stepCounter: 20c95f68-dc80-48a0-86c5-74a85344303a
+          columnCounter: 2f446965-06d8-484f-96a5-17224abaea3d
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
         config: {}
         dataType: VARCHAR(33)
         description: ""
@@ -42,24 +42,24 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 751e2190-885a-4c79-91cd-136fe1626a2d
-                stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+              - columnCounter: 0d542fea-8fe1-4271-ab6c-a86a3832668a
+                stepCounter: 0c6fa26d-e625-4240-aa4b-13642ea503d6
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          NYC_VENDOR: e837d8de-1362-49f6-850f-3240c85a0f55
+          VENDOR: 0c6fa26d-e625-4240-aa4b-13642ea503d6
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: RAW
-            nodeName: NYC_VENDOR
+          - locationName: BRONZE
+            nodeName: VENDOR
         join:
-          joinCondition: FROM {{ ref('RAW', 'NYC_VENDOR') }} "NYC_VENDOR"
-        name: STG_NYC_VENDOR
+          joinCondition: FROM {{ ref('BRONZE', 'VENDOR') }} "VENDOR"
+        name: STG_VENDOR
         noLinkRefs: []
-  name: STG_NYC_VENDOR
+  name: STG_VENDOR
   overrideSQL: false
   schema: ""
   sqlType: Stage

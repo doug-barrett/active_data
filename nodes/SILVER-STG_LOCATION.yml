@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 18e8003b-7f42-4248-ae3f-70e78abd74de
-name: STG_NYC_PICK_UP_LOCATIONS
+id: de263dd4-d12c-4a97-8958-18f8f17a7d62
+name: STG_LOCATION
 operation:
   config:
     insertStrategy: INSERT
@@ -12,15 +12,15 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STAGE
-  materializationType: view
+  locationName: SILVER
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7927596d-8c67-41e2-93bd-ffc395e58a4b
-          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+          columnCounter: 2c589608-1a37-49e6-8b90-53c0c0ab5156
+          stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
         config: {}
         dataType: NUMBER(3,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: dc2f3429-1105-4939-93a4-6a6313344135
-                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+              - columnCounter: 8c043418-35c2-49ed-80ef-e283b8f56e08
+                stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a62c77d1-ca27-4d2d-b45d-e43430a47dbc
-          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+          columnCounter: cbbd6d53-f995-4710-99e7-2ba1ad15933d
+          stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3e6bfa3d-653d-4ada-a31e-3bd3778d6173
-                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+              - columnCounter: f1956cbc-0c39-48cf-91c3-9f55eb155d98
+                stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8f987e6f-ab08-431d-9b2a-f42f3d8c0ccd
-          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+          columnCounter: 80543009-4bc8-47f5-85e9-1a631b432d58
+          stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -56,13 +56,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2e77d613-9837-4c0d-bc25-df099cb48444
-                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+              - columnCounter: 4fe4871b-06ef-4f74-aced-88e645354e89
+                stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ad1999ef-0879-4ada-9cb9-2408f90e6616
-          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+          columnCounter: d326ec5e-570c-4fba-95b1-a625f8ea1447
+          stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -70,13 +70,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 51a45e55-7d3e-4799-8c4a-23cf5d53a3cb
-                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+              - columnCounter: 7fddd732-d994-403f-928f-baf265e4cdde
+                stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3eef9011-f548-4728-9bf7-edc1a1b3adf4
-          stepCounter: 18e8003b-7f42-4248-ae3f-70e78abd74de
+          columnCounter: 0bc98113-19d1-4586-9418-77ffb20d065f
+          stepCounter: de263dd4-d12c-4a97-8958-18f8f17a7d62
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -84,24 +84,24 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2727f503-06a8-41b9-a01b-5bb1ca1cc905
-                stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+              - columnCounter: 9b79d945-37ef-4619-9e7c-eb309ddd735a
+                stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          EXT_NYC_PICK_UP_LOCATIONS: 5e60000d-4ff9-4a40-b169-66d055866225
+          LOCATION: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STAGE
-            nodeName: EXT_NYC_PICK_UP_LOCATIONS
+          - locationName: BRONZE
+            nodeName: LOCATION
         join:
-          joinCondition: FROM {{ ref('STAGE', 'EXT_NYC_PICK_UP_LOCATIONS') }} "EXT_NYC_PICK_UP_LOCATIONS"
-        name: STG_NYC_PICK_UP_LOCATIONS
+          joinCondition: FROM {{ ref('BRONZE', 'LOCATION') }} "LOCATION"
+        name: STG_LOCATION
         noLinkRefs: []
-  name: STG_NYC_PICK_UP_LOCATIONS
+  name: STG_LOCATION
   overrideSQL: false
   schema: ""
   sqlType: Stage

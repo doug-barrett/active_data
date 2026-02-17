@@ -1,11 +1,11 @@
 fileVersion: 1
-id: e837d8de-1362-49f6-850f-3240c85a0f55
-name: NYC_VENDOR
+id: 0c6fa26d-e625-4240-aa4b-13642ea503d6
+name: VENDOR
 operation:
   database: ""
   deployEnabled: true
   description: ""
-  locationName: RAW
+  locationName: BRONZE
   metadata:
     columns:
       - acceptedValues:
@@ -13,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1313b5a9-3bb8-4731-9609-0e3fdadf262d
-          stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+          columnCounter: 1136f84d-1bc0-4fb9-a36e-1cbdc27ae6bb
+          stepCounter: 0c6fa26d-e625-4240-aa4b-13642ea503d6
         config: {}
         dataType: NUMBER(1,0)
         defaultValue: ""
@@ -32,8 +32,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 751e2190-885a-4c79-91cd-136fe1626a2d
-          stepCounter: e837d8de-1362-49f6-850f-3240c85a0f55
+          columnCounter: 0d542fea-8fe1-4271-ab6c-a86a3832668a
+          stepCounter: 0c6fa26d-e625-4240-aa4b-13642ea503d6
         config: {}
         dataType: VARCHAR(33)
         defaultValue: ""
@@ -46,7 +46,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: NYC_VENDOR
+  name: VENDOR
   schema: ""
   sqlType: Source
   type: sourceInput

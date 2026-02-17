@@ -1,62 +1,25 @@
 fileVersion: 1
-id: 5e60000d-4ff9-4a40-b169-66d055866225
-name: EXT_NYC_PICK_UP_LOCATIONS
+id: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
+name: LOCATION
 operation:
-  config:
-    autoRefresh: false
-    cloudProvider: AWS
-    compression: ""
-    cpartexpression: ""
-    emptyfield: true
-    encoding: UTF8
-    escapeenclosed: \134
-    escapeval: ""
-    fieldDelim: ","
-    fieldEnclosed: \042
-    fileFormatLoc: ""
-    fileFormatName: ""
-    fileFormatType: File Format Values
-    fileNames: taxi_zone_lookup.csv
-    filePattern: .*[.]csv
-    fileType: CSV
-    inferschema: false
-    integration: ""
-    mulline: true
-    nullchar: ('\N')
-    parsehdr: true
-    parsehdr1: true
-    partclause: false
-    recDelim: |+
-
-    replaceinvalidcharacters: true
-    skipBlankLines: false
-    skipHeader: "1"
-    snsTopic: arn:aws:sns:us-east-1:121674918127:prod-emea-s3-notification
-    stageName: DOUGS3/nyc/
-    stageStorageLocationName: PUBLIC
-    stripouterarray: true
-    trimSpace: false
   database: ""
   deployEnabled: true
   description: ""
-  isMultisource: false
-  locationName: STAGE
-  materializationType: table
+  locationName: BRONZE
   metadata:
-    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: dc2f3429-1105-4939-93a4-6a6313344135
-          stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+          columnCounter: 8c043418-35c2-49ed-80ef-e283b8f56e08
+          stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         config: {}
         dataType: NUMBER(3,0)
         defaultValue: ""
         description: ""
-        name: LocationID
+        name: LOCATION_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -69,13 +32,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3e6bfa3d-653d-4ada-a31e-3bd3778d6173
-          stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+          columnCounter: f1956cbc-0c39-48cf-91c3-9f55eb155d98
+          stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: Borough
+        name: BOROUGH
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -88,13 +51,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2e77d613-9837-4c0d-bc25-df099cb48444
-          stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+          columnCounter: 4fe4871b-06ef-4f74-aced-88e645354e89
+          stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: Zone
+        name: ZONE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -107,13 +70,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 51a45e55-7d3e-4799-8c4a-23cf5d53a3cb
-          stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+          columnCounter: 7fddd732-d994-403f-928f-baf265e4cdde
+          stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: service_zone
+        name: SERVICE_ZONE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -126,8 +89,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2727f503-06a8-41b9-a01b-5bb1ca1cc905
-          stepCounter: 5e60000d-4ff9-4a40-b169-66d055866225
+          columnCounter: 9b79d945-37ef-4619-9e7c-eb309ddd735a
+          stepCounter: 95f0759a-bf1c-4ec4-a4ff-2a35fea7fa27
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -140,21 +103,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases: {}
-        customSQL:
-          customSQL: ""
-        dependencies: []
-        join:
-          joinCondition: ""
-        name: EXT_NYC_PICK_UP_LOCATIONS
-        noLinkRefs: []
-  name: EXT_NYC_PICK_UP_LOCATIONS
-  overrideSQL: false
+  name: LOCATION
   schema: ""
-  sqlType: External:::298
-  type: sql
+  sqlType: Source
+  type: sourceInput
   version: 1
 type: Node
