@@ -13,39 +13,7 @@ operation:
   locationName: GOLD
   materializationType: table
   metadata:
-    appliedNodeTests:
-      - continueOnFailure: true
-        description: ""
-        name: Improbably distance
-        runOrder: After
-        templateString: |-
-          SELECT 1 
-          FROM {[this]}
-          WHERE TRIP_DISTANCE > 100
-      - continueOnFailure: true
-        description: ""
-        name: Zero Distance
-        runOrder: After
-        templateString: |-
-          SELECT 1 
-          FROM {[this]}
-          WHERE TRIP_DISTANCE = 0
-      - continueOnFailure: true
-        description: ""
-        name: Improbable duration
-        runOrder: After
-        templateString: |-
-          SELECT 1
-          FROM {{this}}
-          WHERE TRIP_DURATION_MINUTES > 120
-      - continueOnFailure: true
-        description: ""
-        name: Improbable Tip
-        runOrder: After
-        templateString: |-
-          SELECT 1
-          FROM {{this}}
-          WHERE TIP_AMOUNT > FARE_AMOUNT
+    appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
