@@ -414,14 +414,14 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_NYC_TAXI1: 2e217825-b657-48e7-9dc1-287ccde18c7e
+          STG_NYC_TAXI3: 2e217825-b657-48e7-9dc1-287ccde18c7e
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: STAGE
-            nodeName: STG_NYC_TAXI1
+            nodeName: STG_NYC_TAXI3
         join:
-          joinCondition: FROM {{ ref('STAGE', 'STG_NYC_TAXI1') }} "STG_NYC_TAXI1"
+          joinCondition: FROM {{ ref('STAGE', 'STG_NYC_TAXI3') }} "STG_NYC_TAXI3"
         name: FCT_NYC_TAXI
         noLinkRefs: []
   name: FCT_NYC_TAXI

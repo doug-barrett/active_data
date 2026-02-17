@@ -1,14 +1,16 @@
 fileVersion: 1
 id: 377bd149-75a2-4f68-8d57-67bb04897ae3
-name: PSTG_NYC_TAXI
+name: STG_NYC_TAXI2
 operation:
   config:
+    insertStrategy: INSERT
     postSQL: ""
     preSQL: ""
     testsEnabled: true
+    truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: Prepare and transform the raw data
   isMultisource: false
   locationName: STAGE
   materializationType: table
@@ -29,6 +31,146 @@ operation:
               - columnCounter: c7292560-a991-430c-95e3-2c2ed8f0927e
                 stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 995f8f73-b1fd-4247-b496-14bbd2c91b8f
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: VENDOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c1b7a9b-8e4d-4ac9-aa4b-2114ff546a00
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d2ded3f-24ba-4d4e-aaaa-acf1dc32bc59
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: PAYMENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ad7b7d1-24c7-43dc-a4d3-9aa67d460b0d
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20fe4b38-5b5a-4c1d-8525-228c7310c6c3
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: RATE_CODE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e94c968-3edc-4542-bd4b-5d6cb9db86f0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a95ce76-93bd-499f-a052-b1bc77341b17
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: TIMESTAMP_TZ
+        description: ""
+        name: PICKUP_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73bcc8b2-9405-49c3-b79c-4e6dfe6d9ce5
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_pickup_datetime")::BIGINT, 6)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b55bfb81-4266-40b8-8a4e-17629da23f87
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: TIMESTAMP_TZ
+        description: ""
+        name: DROPOFF_DATETIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_dropoff_datetime")::BIGINT, 6)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d680409-b903-4e3e-a9d4-4590b4b0a036
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: DO_LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b869dab-b5a8-4a61-bf09-ae97fc603b10
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a467f284-1460-43c1-a3a7-71fad15dd07f
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: PU_LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2233a91-5c65-453a-9368-6bcb82ffdd36
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc41298d-c074-468f-89c2-5131a2da09d8
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: TRIP_DURATION_MINUTES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: DATEDIFF(MINUTE, PICKUP_DATETIME, DROPOFF_DATETIME)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 969df1ab-578c-4004-97b5-5b53feccee72
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TRIP_DISTANCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7eeaa74-2f9f-430c-a8f9-44b00b15b6dc
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 224fcd64-1a06-4254-a4af-7337512f9f26
+          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: TRIP_AVG_SPEED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7eeaa74-2f9f-430c-a8f9-44b00b15b6dc
+                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
+            transform: DIV0(TRIP_DISTANCE , (TRIP_DURATION_MINUTES / 60))
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 8ecddead-cf86-4609-bd8f-0a09c06807a2
@@ -69,20 +211,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 1b2b24c2-e492-4f1e-9d59-e0e2681fa968
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0d680409-b903-4e3e-a9d4-4590b4b0a036
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: DO_LOCATION_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3b869dab-b5a8-4a61-bf09-ae97fc603b10
                 stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
             transform: ""
       - appliedColumnTests: {}
@@ -157,48 +285,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8d2ded3f-24ba-4d4e-aaaa-acf1dc32bc59
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: PAYMENT_TYPE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 4ad7b7d1-24c7-43dc-a4d3-9aa67d460b0d
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: a467f284-1460-43c1-a3a7-71fad15dd07f
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: PU_LOCATION_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d2233a91-5c65-453a-9368-6bcb82ffdd36
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 20fe4b38-5b5a-4c1d-8525-228c7310c6c3
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: RATE_CODE_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1e94c968-3edc-4542-bd4b-5d6cb9db86f0
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 3a81ecb3-0708-46ce-8381-c28083fd261b
           stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
         config: {}
@@ -269,20 +355,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 2a95ce76-93bd-499f-a052-b1bc77341b17
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: TIMESTAMP_TZ
-        description: ""
-        name: PICKUP_DATETIME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 73bcc8b2-9405-49c3-b79c-4e6dfe6d9ce5
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_pickup_datetime")::BIGINT, 6)
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 10f97c43-13d9-46b9-80f8-31af7ee21725
           stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
         config: {}
@@ -295,87 +367,26 @@ operation:
               - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
                 stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: b55bfb81-4266-40b8-8a4e-17629da23f87
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: TIMESTAMP_TZ
-        description: ""
-        name: DROPOFF_DATETIME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: b8eb7b49-d79a-4e32-ac99-1a0f10b068a0
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: TO_TIMESTAMP_TZ(TO_CHAR("tpep_dropoff_datetime")::BIGINT, 6)
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 969df1ab-578c-4004-97b5-5b53feccee72
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: TRIP_DISTANCE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: a7eeaa74-2f9f-430c-a8f9-44b00b15b6dc
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 995f8f73-b1fd-4247-b496-14bbd2c91b8f
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: DOUBLE
-        description: ""
-        name: VENDOR_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3c1b7a9b-8e4d-4ac9-aa4b-2114ff546a00
-                stepCounter: 611def4b-7035-49f1-8373-2bbd1d44d453
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0f3c5f3b-2676-4513-af30-5bdb1c46c58d
-          stepCounter: 377bd149-75a2-4f68-8d57-67bb04897ae3
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        isSystemCreateDate: true
-        name: SYSTEM_CREATE_DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_NYC_TAXI: 611def4b-7035-49f1-8373-2bbd1d44d453
+          STG_NYC_TAXI1: 611def4b-7035-49f1-8373-2bbd1d44d453
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: STAGE
-            nodeName: STG_NYC_TAXI
+            nodeName: STG_NYC_TAXI1
         join:
-          joinCondition: |
-            FROM {{ ref('STAGE', 'STG_NYC_TAXI') }} "STG_NYC_TAXI"
-            WHERE "STG_NYC_TAXI".FILENAME NOT IN (SELECT DISTINCT FILE_NAME FROM {{this}})
-        name: PSTG_NYC_TAXI
-        noLinkRefs:
-          - locationName: STAGE
-            nodeName: PSTG_NYC_TAXI
-  name: PSTG_NYC_TAXI
+          joinCondition: |+
+            FROM {{ ref('STAGE', 'STG_NYC_TAXI1') }} "STG_NYC_TAXI1"
+
+        name: STG_NYC_TAXI2
+        noLinkRefs: []
+  name: STG_NYC_TAXI2
   overrideSQL: false
   schema: ""
-  sqlType: persistentStage
+  sqlType: Stage
   type: sql
   version: 1
 type: Node
