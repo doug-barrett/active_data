@@ -3,6 +3,5 @@ fileVersion: 1
 locations:
   - BRONZE
   - GOLD
-  - PUBLIC
   - SILVER
   - SRC_WEATHER

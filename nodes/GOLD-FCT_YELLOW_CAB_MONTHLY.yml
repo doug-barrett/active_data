@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+name: FCT_YELLOW_CAB_MONTHLY
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9980d9b7-5566-48e8-af75-7eaaca633412
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: FLOAT
+        description: ""
+        isBusinessKey: true
+        name: VENDOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7f253ef-3a52-436e-897f-51082763f70c
+                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd7badac-01a4-4dca-9cee-74e620ecc209
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: VARCHAR(33)
+        description: ""
+        name: VENDOR_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d6bbf682-d6ca-4090-ad02-b116acb8f269
+                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fcb7f5ac-540b-4226-b281-9a6a9afbc52c
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: true
+        name: MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4928708-094c-469a-a6f8-ff4d3a3184cd
+                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b693a2d-e965-4979-a77c-6280b8d3987c
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9df4316a-a742-45ca-b94a-94a816e4c776
+                stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f827a635-df9d-4129-92fd-17609c206053
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a41c3e3b-a116-46f9-b5a1-57da2238fb67
+          stepCounter: 8b3ae5a1-4a99-42d8-8c2a-f96e97b16e07
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_YELLOW_CAB_TRIPS2: 567ec716-0a53-4e84-930d-bfa612f368af
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: STG_YELLOW_CAB_TRIPS2
+        join:
+          joinCondition: FROM {{ ref('SILVER', 'STG_YELLOW_CAB_TRIPS2') }} "STG_YELLOW_CAB_TRIPS2"
+        name: FCT_YELLOW_CAB_MONTHLY
+        noLinkRefs: []
+  name: FCT_YELLOW_CAB_MONTHLY
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

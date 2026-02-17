@@ -5,14 +5,11 @@ mappingDefinitions:
     database: NY_TAXI
     schema: LAND
   GOLD:
-    database: DOUG_DB
-    schema: PRD_GOLD
-  PUBLIC:
-    database: DOUG_DB
-    schema: PUBLIC
+    database: NY_TAXI
+    schema: GOLD
   SILVER:
-    database: DOUG_DB
-    schema: DEV_SILVER
+    database: NY_TAXI
+    schema: SILVER
   SRC_WEATHER:
     database: GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI
     schema: STANDARD_TILE
