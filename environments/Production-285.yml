@@ -3,7 +3,7 @@ id: "285"
 mappingDefinitions:
   BRONZE:
     database: NY_TAXI
-    schema: LAND
+    schema: BRONZE
   GOLD:
     database: NY_TAXI
     schema: GOLD
