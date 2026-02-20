@@ -24,7 +24,7 @@ operation:
           columnCounter: 881e835a-f491-4408-a71e-10a89b802445
           stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
         config: {}
-        dataType: NUMBER(1,0)
+        dataType: NUMBER
         description: ""
         name: VENDOR_ID
         nullable: true
@@ -40,7 +40,7 @@ operation:
           columnCounter: 2f446965-06d8-484f-96a5-17224abaea3d
           stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
         config: {}
-        dataType: VARCHAR(33)
+        dataType: STRING
         description: ""
         name: VENDOR_NAME
         nullable: true

@@ -37,7 +37,7 @@ operation:
           columnCounter: 3a0041e1-2a27-425d-9c23-983b195ddbe1
           stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
         config: {}
-        dataType: NUMBER(1,0)
+        dataType: NUMBER
         description: ""
         isBusinessKey: true
         name: VENDOR_ID
@@ -52,7 +52,7 @@ operation:
           columnCounter: 9ab5b8c5-5706-4f45-a866-3e94a37e72d5
           stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
         config: {}
-        dataType: VARCHAR(33)
+        dataType: STRING
         description: ""
         name: VENDOR_NAME
         nullable: true
