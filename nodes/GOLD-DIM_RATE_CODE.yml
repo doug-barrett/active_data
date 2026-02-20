@@ -8,7 +8,7 @@ operation:
     testsEnabled: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: Taxi rate codes for the fare - populated from a reference dataset provided by New York City (NYC) Taxi & Limousine Commission (TLC)
   isMultisource: false
   locationName: GOLD
   materializationType: table

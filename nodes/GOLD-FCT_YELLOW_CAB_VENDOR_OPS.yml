@@ -8,7 +8,7 @@ operation:
     testsEnabled: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: Summarization of Trip data to provide Operational metrics at Vendor and Month level
   isMultisource: false
   locationName: GOLD
   materializationType: table
