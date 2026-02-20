@@ -33,20 +33,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d6bbf682-d6ca-4090-ad02-b116acb8f269
-          stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
-        config: {}
-        dataType: VARCHAR(33)
-        description: ""
-        name: VENDOR_NAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 746f7b8b-2e44-4a73-a478-951fbe3a1789
-                stepCounter: 1071b060-08d3-4a37-b76b-3b47c74b61ed
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: b753f74a-3e72-444c-93c8-fb2825fa46e9
           stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
         config: {}
@@ -73,6 +59,20 @@ operation:
               - columnCounter: 31bbd3a7-9cc6-4379-a855-f59d0ef2883a
                 stepCounter: 1071b060-08d3-4a37-b76b-3b47c74b61ed
             transform: MONTH("FCT_YELLOW_CAB_TRIPS"."PICKUP_DATETIME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6bbf682-d6ca-4090-ad02-b116acb8f269
+          stepCounter: 567ec716-0a53-4e84-930d-bfa612f368af
+        config: {}
+        dataType: VARCHAR(33)
+        description: ""
+        name: VENDOR_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 746f7b8b-2e44-4a73-a478-951fbe3a1789
+                stepCounter: 1071b060-08d3-4a37-b76b-3b47c74b61ed
+            transform: MAX("FCT_YELLOW_CAB_TRIPS"."VENDOR_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: af48ea90-ba0f-40de-a626-068a0c963027
@@ -198,7 +198,7 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('GOLD', 'FCT_YELLOW_CAB_TRIPS') }} "FCT_YELLOW_CAB_TRIPS"
-            GROUP BY 1, 2, 3, 4
+            GROUP BY 1, 2, 3
         name: STG_YELLOW_CAB_VENDOR_MONTHLY
         noLinkRefs: []
   name: STG_YELLOW_CAB_VENDOR_MONTHLY
