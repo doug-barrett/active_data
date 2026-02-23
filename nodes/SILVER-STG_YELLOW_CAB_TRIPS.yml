@@ -156,7 +156,7 @@ operation:
           - columnReferences:
               - columnCounter: ea3c6fb1-0e7c-433d-be9e-8553c4fad578
                 stepCounter: 9bc9b861-892f-4826-bc53-7dbdbb1cc2db
-            transform: DIV0(TRIP_DISTANCE, TRIP_DURATION_MINUTES)
+            transform: DIV0(TRIP_DISTANCE, TRIP_DURATION_MINUTES) * 60
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 57151ce1-9e9e-4757-b7d0-7218a65b7b0c
