@@ -380,11 +380,9 @@ operation:
         join:
           joinCondition: |
             FROM {{ ref('BRONZE', 'YELLOW_CAB_TRIPS') }} "YELLOW_CAB_TRIPS"
-            WHERE TO_DATE("PICKUP_DATETIME") = (SELECT NVL(MAX(TO_DATE("PICKUP_DATETIME")) + 1, '{{parameters.process_year_start}}') FROM {{ ref_no_link('GOLD', 'FCT_YELLOW_CAB_TRIPS')}})
+            WHERE TO_DATE("PICKUP_DATETIME") BETWEEN CURRENT_DATE - 30 AND CURRENT_DATE
         name: STG_YELLOW_CAB_TRIPS
-        noLinkRefs:
-          - locationName: GOLD
-            nodeName: FCT_YELLOW_CAB_TRIPS
+        noLinkRefs: []
   name: STG_YELLOW_CAB_TRIPS
   overrideSQL: false
   schema: ""
