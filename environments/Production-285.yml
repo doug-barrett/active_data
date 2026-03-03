@@ -10,8 +10,8 @@ mappingDefinitions:
   SILVER:
     database: NY_TAXI
     schema: SILVER
-  SRC_WEATHER:
-    database: GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI
-    schema: STANDARD_TILE
+  SYNQ_AUDIT:
+    database: NY_TAXI
+    schema: SYNQ
 name: Production
 type: Environment

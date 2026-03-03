@@ -1,0 +1,8 @@
+fileVersion: 1
+id: 1e114347-5011-4e8f-a55e-d03839e47df1
+name: VENDOR
+steps:
+  - 0c6fa26d-e625-4240-aa4b-13642ea503d6
+  - 823d4bf9-8860-478a-bdb6-efd072072981
+  - e8d0ce9f-896c-4484-b131-fc1f54540898
+type: Subgraph

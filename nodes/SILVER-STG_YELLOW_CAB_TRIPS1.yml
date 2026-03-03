@@ -23,7 +23,7 @@ operation:
         templateString: |-
           SELECT 1 
           FROM {{this}}
-          WHERE TRIP_DISTANCE > 200
+          WHERE NOT TRIP_DISTANCE BETWEEN 0 AND 200
           AND PAYMENT_TYPE IN ('Cash', 'Credit Card')
       - continueOnFailure: true
         description: ""
@@ -42,7 +42,7 @@ operation:
         templateString: |-
           SELECT 1
           FROM {{this}}
-          WHERE TRIP_DURATION_MINUTES > 180
+          WHERE NOT TRIP_DURATION_MINUTES BETWEEN 0 AND 180
           AND PAYMENT_TYPE IN ('Cash', 'Credit Card')
       - continueOnFailure: true
         description: ""
