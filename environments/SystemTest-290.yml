@@ -1,0 +1,17 @@
+fileVersion: 1
+id: "290"
+mappingDefinitions:
+  BRONZE:
+    database: NY_TAXI
+    schema: BRONZE
+  GOLD:
+    database: DOUG_DB
+    schema: QA_GOLD
+  SILVER:
+    database: DOUG_DB
+    schema: QA_SILVER
+  SYNQ_AUDIT:
+    database: NY_TAXI
+    schema: SYNQ
+name: System Test
+type: Environment
