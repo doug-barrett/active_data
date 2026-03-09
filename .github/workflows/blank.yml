@@ -1,0 +1,42 @@
+name: Deploy to System Test
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+env:
+  COA_VERSION: latest # Versions released on NPM here: https://www.npmjs.com/package/@coalescesoftware/coa  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22.19.0
+
+    - name: Write Snowflake Key to file
+      run: |
+        umask 077
+        printf '%s' "${{ secrets.SF_PRIVATE_KEY }}" > key.pem
+        
+    - name: Write Coa Config 
+      run: echo '${{ secrets.COA_CONFIG }}' >> COA_CONFIG
+    
+    - name: Install Coalesce CLI tool
+      run: npm list | grep "@coalescesoftware/coa@${{ env.COA_VERSION }}" || npm install @coalescesoftware/coa@${{ env.COA_VERSION }}
+
+    - name: Print version number
+      run: npx coa --version
+
+    - name: Create Deployment Plan
+      run: npx coa plan --config COA_CONFIG --out ./coa-plan --debug
+
+    - name: Deploy Plan
+      run: npx coa deploy --config COA_CONFIG --plan ./coa-plan --debug
+
+    - name: Run Job
+      run: npx coa refresh --config COA_CONFIG
