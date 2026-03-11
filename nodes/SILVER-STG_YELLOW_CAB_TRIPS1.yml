@@ -51,7 +51,7 @@ operation:
         templateString: |-
           SELECT 1 
           FROM {{this}}
-          WHERE TRIP_DISTANCE = 0
+          WHERE TRIP_DISTANCE < 0
           AND FARE_AMOUNT > 0
     columns:
       - appliedColumnTests: {}
