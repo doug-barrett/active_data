@@ -1,0 +1,6 @@
+excludeSelector: "+{ location: GOLD name: DIM_* }"
+fileVersion: 1
+id: "164"
+includeSelector: "+{ location: GOLD name: FCT_YELLOW_CAB_TRIPS }+"
+name: New Job
+type: Job

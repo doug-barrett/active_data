@@ -1,17 +1,17 @@
 fileVersion: 1
-id: "290"
+id: "285"
 mappingDefinitions:
   BRONZE:
     database: NY_TAXI
     schema: BRONZE
   GOLD:
-    database: DOUG_DB
-    schema: QA_GOLD
+    database: NY_TAXI
+    schema: GOLD
   SILVER:
-    database: DOUG_DB
-    schema: QA_SILVER
+    database: NY_TAXI
+    schema: SILVER
   SYNQ_AUDIT:
     database: NY_TAXI
     schema: SYNQ
-name: System Test
+name: SFx Production
 type: Environment
