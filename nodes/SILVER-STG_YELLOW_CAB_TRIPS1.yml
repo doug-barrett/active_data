@@ -56,6 +56,20 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: d73fd6d2-1fde-4622-8d41-84e528522a18
+          stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: TRIP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af858f51-0cd0-432b-805a-8be8d35903b7
+                stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 2d114298-a304-4911-baf2-d026e77b26ed
           stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
         config: {}

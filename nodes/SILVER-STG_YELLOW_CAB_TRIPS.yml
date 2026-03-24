@@ -19,6 +19,20 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: af858f51-0cd0-432b-805a-8be8d35903b7
+          stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: TRIP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 20612b84-34cf-4daa-8303-553e2ea86d54
+                stepCounter: 9bc9b861-892f-4826-bc53-7dbdbb1cc2db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 7fed750d-b089-436a-9565-069a055341fe
           stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
         config: {}
@@ -378,7 +392,7 @@ operation:
           - locationName: BRONZE
             nodeName: YELLOW_CAB_TRIPS
         join:
-          joinCondition: |
+          joinCondition: |-
             FROM {{ ref('BRONZE', 'YELLOW_CAB_TRIPS') }} "YELLOW_CAB_TRIPS"
             WHERE TO_DATE("PICKUP_DATETIME") BETWEEN CURRENT_DATE - {{parameters.process_days}} AND CURRENT_DATE
         name: STG_YELLOW_CAB_TRIPS

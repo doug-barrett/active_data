@@ -3,8 +3,11 @@ id: 1071b060-08d3-4a37-b76b-3b47c74b61ed
 name: FCT_YELLOW_CAB_TRIPS
 operation:
   config:
-    postSQL: ""
-    preSQL: DELETE FROM {{this}} WHERE TO_DATE(PICKUP_DATETIME) IN (SELECT DISTINCT TO_DATE(PICKUP_DATETIME) FROM {{ref('SILVER', 'STG_YELLOW_CAB_TRIPS1')}})
+    postSQL: |-
+      /* Add sneaky DQ issue for Vendor 2 */
+      DELETE FROM {{this}}
+      WHERE VENDOR_ID = 2 AND TO_DATE(PICKUP_DATETIME) >= CURRENT_DATE - 1
+    preSQL: ""
     testsEnabled: true
   database: ""
   deployEnabled: true
@@ -15,6 +18,21 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 369d7b0a-507c-4050-b775-af990575c3af
+          stepCounter: 1071b060-08d3-4a37-b76b-3b47c74b61ed
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        isBusinessKey: true
+        name: TRIP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d73fd6d2-1fde-4622-8d41-84e528522a18
+                stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
+            transform: ""
       - appliedColumnTests:
           hasNull: true
         columnReference:
