@@ -49,6 +49,104 @@ operation:
               - columnCounter: 0d542fea-8fe1-4271-ab6c-a86a3832668a
                 stepCounter: 0c6fa26d-e625-4240-aa4b-13642ea503d6
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09202572-6eb6-436b-9325-9cf3484d8695
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a70d8343-b00b-4d10-a425-975e2b6c780f
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a6a3fda-6064-4a4d-893d-db7d9fde16ed
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c148ff25-c974-4a9e-a9da-c4aaf95f22e9
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf15bf41-346c-49de-ba01-9017637aac4a
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8adf65d6-f2e2-490e-aaa7-ab69395981f1
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32df86a4-a07d-49ef-b54d-357661a8a7a1
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c0c6a0de-274f-4672-8b09-db3df175e440
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7df45f66-7f69-4007-bbe4-1f3a4f7f3338
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ZIP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6002936d-8649-4419-be03-0b1a386c0b86
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d450318-c317-4981-826f-070d55c98e32
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: VARCHAR(14)
+        description: ""
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e1da650-6344-478e-b8a2-a4768c2ef018
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96074750-2f46-4f37-880f-c11ffbbb2c97
+          stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: DRIVERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c43b807-63b0-49e4-82f9-eb5dcd7f0dec
+                stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+            transform: ""
     cteString: ""
     enabledColumnTestIDs:
       - hasNull
@@ -56,13 +154,19 @@ operation:
     sourceMapping:
       - aliases:
           VENDOR: 0c6fa26d-e625-4240-aa4b-13642ea503d6
+          V_VENDOR_DETAILS: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: BRONZE
             nodeName: VENDOR
+          - locationName: SILVER
+            nodeName: V_VENDOR_DETAILS
         join:
-          joinCondition: FROM {{ ref('BRONZE', 'VENDOR') }} "VENDOR"
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'VENDOR') }} "VENDOR"
+            INNER JOIN {{ ref('SILVER', 'V_VENDOR_DETAILS') }} "V_VENDOR_DETAILS"
+            ON "VENDOR"."VENDOR_ID" = "V_VENDOR_DETAILS"."VENDOR_ID"
         name: STG_VENDOR
         noLinkRefs: []
   name: STG_VENDOR

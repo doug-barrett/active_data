@@ -1,0 +1,154 @@
+fileVersion: 1
+id: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+name: V_VENDOR_DETAILS
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e90e54c1-7220-4cb5-8a6c-f02473fa31d4
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: VENDOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c43abcd0-a390-4eda-bfcd-0b9dc087222a
+                stepCounter: c0a9be7f-599f-49da-86ef-437b7db55467
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a70d8343-b00b-4d10-a425-975e2b6c780f
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"VENDOR_DETAILS\".\"HQ_ADDRESS_DETAILS\":\"ADDRESS\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c148ff25-c974-4a9e-a9da-c4aaf95f22e9
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"VENDOR_DETAILS\".\"HQ_ADDRESS_DETAILS\":\"CITY\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8adf65d6-f2e2-490e-aaa7-ab69395981f1
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"VENDOR_DETAILS\".\"HQ_ADDRESS_DETAILS\":\"COUNTRY\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0c6a0de-274f-4672-8b09-db3df175e440
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"VENDOR_DETAILS\".\"HQ_ADDRESS_DETAILS\":\"STATE\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6002936d-8649-4419-be03-0b1a386c0b86
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ZIP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"VENDOR_DETAILS\".\"HQ_ADDRESS_DETAILS\":\"ZIP\"::STRING"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e1da650-6344-478e-b8a2-a4768c2ef018
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: VARCHAR(14)
+        description: ""
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5303693a-7d9b-42a3-a3ca-721d20a269b2
+                stepCounter: c0a9be7f-599f-49da-86ef-437b7db55467
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c43b807-63b0-49e4-82f9-eb5dcd7f0dec
+          stepCounter: 7a4b976a-ffcd-4b0b-9b52-290111b003dc
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: DRIVERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a728aa1-6ae9-41fb-a17c-9a5ef26dc9f4
+                stepCounter: c0a9be7f-599f-49da-86ef-437b7db55467
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          VENDOR_DETAILS: c0a9be7f-599f-49da-86ef-437b7db55467
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: VENDOR_DETAILS
+        join:
+          joinCondition: FROM {{ ref('BRONZE', 'VENDOR_DETAILS') }} "VENDOR_DETAILS"
+        name: V_VENDOR_DETAILS
+        noLinkRefs: []
+  name: V_VENDOR_DETAILS
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

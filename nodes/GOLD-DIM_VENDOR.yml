@@ -61,6 +61,106 @@ operation:
               - columnCounter: 2f446965-06d8-484f-96a5-17224abaea3d
                 stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ed86e18-75ae-4be7-b5e1-83010c6f4818
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09202572-6eb6-436b-9325-9cf3484d8695
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77edbcd9-9324-4bbe-8e83-2b03a89ec05f
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a6a3fda-6064-4a4d-893d-db7d9fde16ed
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cab2b30d-5adc-48ec-ab1c-d0359710f804
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: STRING
+        description: ""
+        isChangeTracking: true
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf15bf41-346c-49de-ba01-9017637aac4a
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e58cb11d-fe4a-430b-b067-ec02e10b86fb
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: STRING
+        description: ""
+        isChangeTracking: true
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32df86a4-a07d-49ef-b54d-357661a8a7a1
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ebe8daa-d2f1-4b71-b91d-29e249ef4559
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ZIP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7df45f66-7f69-4007-bbe4-1f3a4f7f3338
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47d0080d-2499-4314-b96e-bd32ab6eec74
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: VARCHAR(14)
+        description: ""
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d450318-c317-4981-826f-070d55c98e32
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4852eb22-f546-41dc-9a17-064d06bb0ab3
+          stepCounter: 823d4bf9-8860-478a-bdb6-efd072072981
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: DRIVERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96074750-2f46-4f37-880f-c11ffbbb2c97
+                stepCounter: e8d0ce9f-896c-4484-b131-fc1f54540898
+            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
@@ -174,7 +274,8 @@ operation:
           - locationName: SILVER
             nodeName: STG_VENDOR
         join:
-          joinCondition: FROM {{ ref('SILVER', 'STG_VENDOR') }} "STG_VENDOR"
+          joinCondition: |
+            FROM {{ ref('SILVER', 'STG_VENDOR') }} "STG_VENDOR"
         name: DIM_VENDOR
         noLinkRefs: []
   name: DIM_VENDOR
