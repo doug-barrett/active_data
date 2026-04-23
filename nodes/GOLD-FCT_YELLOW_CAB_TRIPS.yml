@@ -4,7 +4,7 @@ name: FCT_YELLOW_CAB_TRIPS
 operation:
   config:
     postSQL: |-
-      /* Add sneaky DQ issue for Vendor 2 */
+      /* Add DQ issue to test monitoring- remove when tested */
       DELETE FROM {{this}}
       WHERE VENDOR_ID = 2 AND TO_DATE(PICKUP_DATETIME) >= CURRENT_DATE - 1
     preSQL: ""
@@ -528,10 +528,7 @@ operation:
               - columnCounter: 37f8ef64-5d71-477c-9b0b-74f5d871a946
                 stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests:
+      - appliedColumnTests:
           hasNull: false
         columnReference:
           columnCounter: 8a10dbbd-aab1-43cf-9feb-3c7b45dd0303
@@ -546,10 +543,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests:
+      - appliedColumnTests:
           hasNull: false
         columnReference:
           columnCounter: 95be16e7-50f1-47da-a379-3e18cec0c823
@@ -565,8 +559,11 @@ operation:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs:
       - hasNull
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_YELLOW_CAB_TRIPS1: 6384942e-b835-4067-aa2d-114d3ad0a58f
@@ -583,6 +580,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Fact
+  table: FCT_YELLOW_CAB_TRIPS
   type: sql
   version: 1
 type: Node
