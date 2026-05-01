@@ -381,6 +381,26 @@ operation:
               - columnCounter: 5e74507d-4191-4dc1-967d-758d89b1a16f
                 stepCounter: 9bc9b861-892f-4826-bc53-7dbdbb1cc2db
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 766b0b8c-b36b-4ad8-88a5-f9c961e13b1e
+          stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: COALESCE_RUN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: PARSE_JSON(CURRENT_QUERY_TAG()):"coalesce"."runID"::NUMBER
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

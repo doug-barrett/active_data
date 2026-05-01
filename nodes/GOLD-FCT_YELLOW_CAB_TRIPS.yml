@@ -3,10 +3,7 @@ id: 1071b060-08d3-4a37-b76b-3b47c74b61ed
 name: FCT_YELLOW_CAB_TRIPS
 operation:
   config:
-    postSQL: |-
-      /* Add DQ issue to test monitoring- remove when tested */
-      DELETE FROM {{this}}
-      WHERE VENDOR_ID = 2 AND TO_DATE(PICKUP_DATETIME) >= CURRENT_DATE - 1
+    postSQL: ""
     preSQL: ""
     testsEnabled: true
   database: ""
@@ -558,6 +555,23 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a1f7366-8823-41e5-a338-52ca99515db2
+          stepCounter: 1071b060-08d3-4a37-b76b-3b47c74b61ed
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: COALESCE_RUN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3771df8-f3cd-46fc-bc4b-f837e580bc2c
+                stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
+            transform: ""
     cteString: ""
     description: ""
     destinationName: ""

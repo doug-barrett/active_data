@@ -530,6 +530,23 @@ operation:
               - columnCounter: 140a8f4d-15d9-4d81-8ee8-ffd57e4d7421
                 stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
             transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3771df8-f3cd-46fc-bc4b-f837e580bc2c
+          stepCounter: 6384942e-b835-4067-aa2d-114d3ad0a58f
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: COALESCE_RUN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 766b0b8c-b36b-4ad8-88a5-f9c961e13b1e
+                stepCounter: cd9ff3ed-0ebc-4865-86a3-186bb19aebc0
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
