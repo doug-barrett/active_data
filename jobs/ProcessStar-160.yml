@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "160"
-includeSelector: "+{name: FCT_*}+"
+includeSelector: "+{name: FCT_*}+ OR { location: \"SILVER\" name: \"PSTG_YELLOW_CAB_TRIPS_AUDIT\" }"
 name: Process Star
 type: Job
